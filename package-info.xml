@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<license>
+<!--
+/**
+ * Simple Favicon (SFI)
+ *
+ * @package SFI
+ * @author emanuele
+ * @copyright 2012, Simple Machines
+ * @license http://www.simplemachines.org/about/smf/license.php BSD
+ *
+ * @version 0.1.0
+ */
+-->
+	</license>
+	<id>emanuele:simplefavicon</id>
+	<name>Simple Favicon</name>
+	<version>0.1.0</version>
+	<type>modification</type>
+	<install for="2.0 - 2.0.99">
+		<require-file name="Subs-SimpleFavicon.php" destination="$sourcedir" />
+		<require-file name="SimpleFavicon.english.php" destination="$languagedir" />
+		<redirect url="?action=admin;area=modsettings;sa=general" />
+		<code>install.php</code>
+	</install>
+	<uninstall for="2.0 - 2.0.99">
+		<remove-file name="$sourcedir/Subs-SimpleFavicon.php" />
+		<remove-file name="$languagedir/SimpleFavicon.english.php" />
+		<redirect url="?action=admin;area=packages" />
+		<code>install.php</code>
+	</uninstall>
+</package-info>
