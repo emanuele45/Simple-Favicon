@@ -43,7 +43,7 @@ function sfi_add_favicon ()
 {
 	global $context, $modSettings;
 
-	$context['html_headers'] = '
+	$context['html_headers'] .= '
 	<link rel="shortcut icon" href="' . (!empty($modSettings['sfi_set_new_favicon']) ? $modSettings['sfi_set_new_favicon'] : '/favicon.ico') . '" />';
 }
 
